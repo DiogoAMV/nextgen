@@ -1,11 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+import { createGlobalStyle } from 'styled-components'
 
-:root {
-  /* Color styles */
+const GlobalStyle = createGlobalStyle`
+  :root {
+    /* Color styles */
   --black: rgba(0, 0, 0, 1);
   --white: rgba(255, 255, 255, 1);
   --black--alpha--900: rgba(0, 0, 0, 0.9200000166893005);
@@ -131,6 +128,7 @@
 
   /* Text-size styles */
   /* base size: 1rem (16px) */
+  --default: 1rem;
   --desktop---h1: 3rem;
   --desktop---h2: 1.5rem;
   --desktop---h3: 1.25rem;
@@ -150,12 +148,14 @@
   --mobile---text--underline: 1rem;
   --mobile---text--small--bold: 0.75rem;
 
+  /* Logo */
+  --logo-size: 1.5rem;
+
   /* Effect styles */
   --focus-outline: 0px 0px 0px rgba(226, 149, 71, 0.5);
   --button-blur: ;
   --mockup-shadow: 0px 16px 32px rgba(0, 0, 0, 0.2);
-}
+  }
+`
 
-body {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-}
+export default GlobalStyle
